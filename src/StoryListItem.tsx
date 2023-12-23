@@ -45,6 +45,7 @@ export const StoryListItem = ({
   storyImageStyle,
   storyAvatarImageStyle,
   storyContainerStyle,
+  showButton,
   ...props
 }: StoryListItemProps) => {
   const [load, setLoad] = useState<boolean>(true);
@@ -312,7 +313,7 @@ export const StoryListItem = ({
           </TouchableWithoutFeedback>
         </View>
       </View>
-      {typeof renderSwipeUpComponent === 'function' ? (
+      {typeof renderSwipeUpComponent === 'function' && showButton ? (
         renderSwipeUpComponent({
           onPress: onSwipeUp,
           item: content[current],

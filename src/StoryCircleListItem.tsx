@@ -26,7 +26,6 @@ const StoryCircleListItem = ({
   handleStoryItemPress,
   avatarImageStyle,
   avatarWrapperStyle,
-  haveButton,
 }: StoryCircleListItemProps) => {
   const [isPressed, setIsPressed] = useState(item?.seen);
 
@@ -98,7 +97,7 @@ const StoryCircleListItem = ({
           {item.user_name}
         </Text>
       )}
-      {(item?.seen) && haveButton && (
+      {item.showButton && (
       <View style={styles.fireStyle}>
           <Image source={ICON_AVATAR} style={{width: 12, height: 12}} />
       </View>

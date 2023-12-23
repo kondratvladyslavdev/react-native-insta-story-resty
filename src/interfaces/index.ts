@@ -15,6 +15,8 @@ export interface IUserStory<T = Record<string, any>> {
   stories: IUserStoryItem<T>[];
   /** INTERNAL USE ONLY */
   seen?: boolean;
+
+  showButton?: boolean;
 }
 
 export interface IUserStoryItem<T = Record<string, any>> {
@@ -27,6 +29,7 @@ export interface IUserStoryItem<T = Record<string, any>> {
   customProps?: T;
   /** FOR INTERNAL USE ONLY */
   finish?: number;
+
 }
 
 /** User with one story representing the current story on screen */
@@ -154,6 +157,8 @@ export interface StoryListItemProps {
   storyAvatarImageStyle?: ImageStyle;
   /** Custom styles for the main story item container */
   storyContainerStyle?: ViewStyle;
+
+  showButton?: boolean;
 }
 
 export interface StoryProps {
