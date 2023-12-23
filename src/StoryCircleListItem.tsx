@@ -12,6 +12,7 @@ import { usePrevious } from './helpers/StateHelpers';
 import { IUserStory, StoryCircleListItemProps } from './interfaces';
 
 import DEFAULT_AVATAR from './assets/images/no_avatar.png';
+import ICON_AVATAR from './assets/images/fire.png';
 
 const StoryCircleListItem = ({
   item,
@@ -96,6 +97,10 @@ const StoryCircleListItem = ({
           {item.user_name}
         </Text>
       )}
+
+      <View style={styles.fireStyle}>
+          <Image source={ICON_AVATAR} style={{width: 12, height: 12}} />
+      </View>
     </View>
   );
 };
@@ -123,4 +128,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     fontSize: 11,
   },
+  fireStyle:{
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    borderRadius: 100,
+    width: 18,
+    height: 18,
+    backgroundColor: '#FFC100',
+  }
 });
