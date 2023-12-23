@@ -21,6 +21,8 @@ import {
   StoryListItemProps,
 } from './interfaces';
 
+import ICON_BACK from './assets/images/close.png';
+
 const { width, height } = Dimensions.get('window');
 
 export const StoryListItem = ({
@@ -62,8 +64,6 @@ export const StoryListItem = ({
   const progress = useRef(new Animated.Value(0)).current;
 
   const prevCurrentPage = usePrevious(currentPage);
-
-  import ICON_BACK from './assets/images/close-btn.png';
 
   useEffect(() => {
     let isPrevious = !!prevCurrentPage && prevCurrentPage > currentPage;
