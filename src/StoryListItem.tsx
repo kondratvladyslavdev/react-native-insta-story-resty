@@ -277,7 +277,7 @@ export const StoryListItem = ({
                   }
                 }}
               >
-                <Image source={ICON_BACK}  width={12} height={12}/>
+                <Image source={ICON_BACK} style={{width: 12, height: 12, position: 'absolute', alignSelf: 'center', marginTop:9}}/>
               </TouchableOpacity>
             )}
           </View>
