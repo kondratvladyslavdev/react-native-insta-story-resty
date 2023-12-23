@@ -9,18 +9,18 @@ import {
 export type NextOrPrevious = 'next' | 'previous';
 
 export interface IUserStory<T = Record<string, any>> {
-  user_id: number;
+  user_id: string;
   user_image: string | undefined;
   user_name: string;
   stories: IUserStoryItem<T>[];
   /** INTERNAL USE ONLY */
   seen?: boolean;
-  
+
   showButton?: boolean;
 }
 
 export interface IUserStoryItem<T = Record<string, any>> {
-  story_id: number;
+  story_id: string;
   story_image: string | undefined;
   /** Function that gets called when the swipe up button is pressed */
   onPress?: (props?: any) => any;

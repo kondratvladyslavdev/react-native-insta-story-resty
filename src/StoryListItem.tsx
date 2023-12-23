@@ -324,8 +324,8 @@ export const StoryListItem = ({
           onPress={onSwipeUp}
           style={styles.swipeUpBtn}
         >
-          <Text style={styles.swipeText}></Text>
-          <Text style={styles.swipeText}>{swipeText}</Text>
+          {/* <Text style={styles.swipeText}></Text>
+          <Text style={styles.swipeText}>{swipeText}</Text> */}
         </TouchableOpacity>
       )}
     </GestureRecognizer>
