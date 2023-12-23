@@ -109,7 +109,7 @@ export interface StoryListItemProps {
   index: number;
   key: number;
   /** ID of the user - IUserStory.user_id */
-  userId: number;
+  userId: string;
   /** Name of the user - IUserStory.user_name */
   profileName: string;
   /** Profile picture of the user - IUserStory.user_image */
