@@ -63,6 +63,8 @@ export const StoryListItem = ({
 
   const prevCurrentPage = usePrevious(currentPage);
 
+  import ICON_BACK from './assets/images/close-btn.png';
+
   useEffect(() => {
     let isPrevious = !!prevCurrentPage && prevCurrentPage > currentPage;
     if (isPrevious) {
@@ -275,7 +277,7 @@ export const StoryListItem = ({
                   }
                 }}
               >
-                <Text style={styles.whiteText}>X</Text>
+                <Image source={ICON_BACK}  width={12} height={12}/>
               </TouchableOpacity>
             )}
           </View>
@@ -353,6 +355,10 @@ const styles = StyleSheet.create({
   flexRowCenter: {
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: '#00000090',
+    borderRadius: 7,
+    padding: 4,
+    height: 30,
   },
   image: {
     width: width,
@@ -392,22 +398,27 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 15,
+    paddingTop: 15
   },
   avatarImage: {
-    height: 30,
-    width: 30,
+    height: 22,
+    width: 22,
     borderRadius: 100,
   },
   avatarText: {
-    fontWeight: 'bold',
+    fontWeight: '500',
+    fontSize: 13,
     color: 'white',
-    paddingLeft: 10,
+    paddingLeft: 5,
   },
   closeIconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 50,
+    height: 30,
+    width: 30,
     paddingHorizontal: 15,
+    backgroundColor: '#00000090',
+    borderRadius: 7,
   },
   pressContainer: {
     flex: 1,
