@@ -60,6 +60,10 @@ export const Story = ({
   };
 
   useEffect(() => {
+    setDataState(data)
+  }, [data]);
+
+  useEffect(() => {
     handleSeen();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
