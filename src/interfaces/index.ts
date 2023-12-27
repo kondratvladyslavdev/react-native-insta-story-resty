@@ -31,6 +31,7 @@ export interface IUserStoryItem<T = Record<string, any>> {
   /** FOR INTERNAL USE ONLY */
   finish?: number;
 
+  updatedAt?: string;
 }
 
 /** User with one story representing the current story on screen */
