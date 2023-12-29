@@ -98,9 +98,9 @@ const StoryCircleListItem = ({
           {item.user_name}
         </Text>
       )}
-      {item.showButton && (
+      {item.showButton && item.icon && (
       <View style={styles.fireStyle}>
-          <Image source={ICON_AVATAR} style={{width: 12, height: 12}} />
+          <Image source={{uri: item.icon}} style={{width: 12, height: 12}} />
       </View>
     )}
     </View>

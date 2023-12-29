@@ -30,7 +30,6 @@ export interface IUserStoryItem<T = Record<string, any>> {
   customProps?: T;
   /** FOR INTERNAL USE ONLY */
   finish?: number;
-
   updatedAt?: string;
 }
 
@@ -120,6 +119,8 @@ export interface StoryListItemProps {
   duration: number;
   /** Text of the swipe up button */
   swipeText?: string;
+
+  icon?: string
   /**
    * Callback which returns a custom React Element to use as the
    * swipeUpComponent. IUserStoryItem is passed as an arg.
