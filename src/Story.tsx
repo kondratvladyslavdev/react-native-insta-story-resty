@@ -142,6 +142,7 @@ export const Story = ({
           storyAvatarImageStyle={storyAvatarImageStyle}
           storyContainerStyle={storyContainerStyle}
           showButton={x.showButton}
+          icon={x.icon}
         />
       );
     });

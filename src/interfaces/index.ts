@@ -18,6 +18,7 @@ export interface IUserStory<T = Record<string, any>> {
   seen?: boolean;
 
   showButton?: boolean;
+  icon?: string
 }
 
 export interface IUserStoryItem<T = Record<string, any>> {
