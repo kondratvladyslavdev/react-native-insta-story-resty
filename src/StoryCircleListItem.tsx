@@ -9,6 +9,8 @@ import {
   Platform,
 } from 'react-native';
 
+import {SvgUri} from 'react-native-svg';
+
 import { usePrevious } from './helpers/StateHelpers';
 import { IUserStory, StoryCircleListItemProps } from './interfaces';
 
@@ -100,7 +102,12 @@ const StoryCircleListItem = ({
       )}
       {item.showButton && item.icon && (
       <View style={styles.fireStyle}>
-          <Image source={{uri: item.icon}} style={{width: 12, height: 12}} />
+        <SvgUri
+            uri={item.icon}
+            width={12}
+            height={12}
+          />
+          {/* <Image source={{uri: item.icon}} style={{width: 12, height: 12}} /> */}
       </View>
     )}
     </View>
