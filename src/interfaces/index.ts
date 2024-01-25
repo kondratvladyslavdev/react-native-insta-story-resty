@@ -62,6 +62,7 @@ export interface TextRenderProps<T = Record<string, any>> {
   profileName: string;
   /** The current item */
   item: IUserStoryItem<T>;
+  handleCloseModal: () => void
 }
 
 export type RenderCustomText = (props: TextRenderProps) => React.ReactNode;

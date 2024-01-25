@@ -77,7 +77,7 @@ export default class AndroidCubeEffect extends React.Component {
       } else if (gestureState.dx < -50) {
         mod = -width / 2;
       }
-      let modPage = gestureState.dx > 0 ? 100 : -100;
+      let modPage = gestureState.dx > 0 ? 200 : -200;
 
       const currentPage = Math.abs(this._closestPage(this._value.x + modPage));
       let goTo = this._closest(this._value.x + mod);
@@ -133,7 +133,7 @@ export default class AndroidCubeEffect extends React.Component {
 
   /*
     Private methods
-    */
+  */
 
   _getTransformsFor = (i) => {
     let scrollX = this._animatedValue.x;

@@ -49,6 +49,7 @@ export const StoryListItem = ({
   storyAvatarImageStyle,
   storyContainerStyle,
   showButton,
+  handleClosePress,
   ...props
 }: StoryListItemProps) => {
   const [load, setLoad] = useState<boolean>(true);
@@ -217,6 +218,7 @@ export const StoryListItem = ({
             onLoadEnd={() => start()}
             source={{ uri: content[current].story_image }}
             style={[styles.image, storyImageStyle]}
+            resizeMode='contain'
           />
           {load && (
             <View style={styles.spinnerContainer}>
@@ -259,6 +261,7 @@ export const StoryListItem = ({
               renderTextComponent({
                 item: content[current],
                 profileName,
+                handleCloseModal: handleClosePress
               })
             ) : (
               <Text style={styles.avatarText}>{profileName}</Text>

@@ -40,7 +40,7 @@ export default class CubeNavigationHorizontal extends React.Component {
       if (this.props.callbackOnSwipe) {
         this.props.callbackOnSwipe(false);
       }
-      let mod = gestureState.dx > 0 ? 100 : -100;
+      let mod = gestureState.dx > 0 ? 200 : -200;
 
       const currentPage = this._closest(this._value.x + mod);
       let goTo = this.pages[currentPage];
@@ -103,8 +103,8 @@ export default class CubeNavigationHorizontal extends React.Component {
   }
 
   /*
-      @page: index
-    */
+    @page: index
+  */
   scrollTo(page, animated) {
     animated = animated == undefined ? true : animated;
 

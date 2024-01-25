@@ -82,6 +82,12 @@ export const Story = ({
       }
     }
   };
+  const handleClosePress = () => {
+    setIsModalOpen(false);
+    if (onClose) {
+      onClose(x);
+    }
+  }
 
   function onStoryFinish(state: NextOrPrevious) {
     if (!isNullOrWhitespace(state)) {
@@ -126,12 +132,7 @@ export const Story = ({
           renderSwipeUpComponent={renderSwipeUpComponent}
           renderCloseComponent={renderCloseComponent}
           renderTextComponent={renderTextComponent}
-          onClosePress={() => {
-            setIsModalOpen(false);
-            if (onClose) {
-              onClose(x);
-            }
-          }}
+          onClosePress={handleClosePress}
           index={i}
           onStorySeen={onStorySeen}
           unloadedAnimationBarStyle={unloadedAnimationBarStyle}
@@ -143,6 +144,7 @@ export const Story = ({
           storyContainerStyle={storyContainerStyle}
           showButton={x.showButton}
           icon={x.icon}
+          handleClosePress={handleClosePress}
         />
       );
     });
