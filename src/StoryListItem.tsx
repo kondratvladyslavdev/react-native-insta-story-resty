@@ -218,7 +218,7 @@ export const StoryListItem = ({
             onLoadEnd={() => start()}
             source={{ uri: content[current].story_image }}
             style={[styles.image, storyImageStyle]}
-            resizeMode='contain'
+            resizeMode="cover"
           />
           {load && (
             <View style={styles.spinnerContainer}>
@@ -256,12 +256,13 @@ export const StoryListItem = ({
             <Image
               style={[styles.avatarImage, storyAvatarImageStyle]}
               source={{ uri: profileImage }}
+              resizeMode="cover"
             />
             {typeof renderTextComponent === 'function' ? (
               renderTextComponent({
                 item: content[current],
                 profileName,
-                handleCloseModal: handleClosePress
+                handleCloseModal: handleClosePress,
               })
             ) : (
               <Text style={styles.avatarText}>{profileName}</Text>
@@ -281,7 +282,16 @@ export const StoryListItem = ({
                   }
                 }}
               >
-                <Image source={ICON_BACK} style={{width: 12, height: 12, position: 'absolute', alignSelf: 'center', marginTop:9}}/>
+                <Image
+                  source={ICON_BACK}
+                  style={{
+                    width: 12,
+                    height: 12,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    marginTop: 9,
+                  }}
+                />
               </TouchableOpacity>
             )}
           </View>
@@ -402,7 +412,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 15,
-    paddingTop: 15
+    paddingTop: 15,
   },
   avatarImage: {
     height: 22,
